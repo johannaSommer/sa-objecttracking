@@ -31,7 +31,7 @@ params.minConvexity = 0.5
 
 # Filter by Inertia
 params.filterByInertia = True
-params.minInertiaRatio = 0.4
+params.minInertiaRatio = 0.1
 params.maxInertiaRatio = 0.5
 
 # Set up the detector with default parameters.
