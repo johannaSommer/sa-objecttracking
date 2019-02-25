@@ -5,7 +5,7 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description='This program shows how to use background subtraction methods provided by \
                                               OpenCV. You can process both videos and images.')
-parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='negative_3.mp4')
+parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='Ballwechsel1.mp4')
 parser.add_argument('--algo', type=str, help='Background subtraction method (KNN, MOG2).', default='MOG2')
 args = parser.parse_args()
 
@@ -19,7 +19,7 @@ filterByColor = False
 # Filter by Area.
 params.filterByArea = True
 params.minArea = 150
-# params.maxArea = 200
+params.maxArea = 200
 
 # Filter by Circularity
 # params.filterByCircularity = True
@@ -52,12 +52,13 @@ while True:
         break
 
     fgMask = backSub.apply(frame)
+    frameinverted = cv.bitwise_not(fgMask)
 
-    keypoints = detector.detect(frame)
+    keypoints = detector.detect(frameinverted)
 
     # Draw detected blobs as red circles.
     # cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS ensures the size of the circle corresponds to the size of blob
-    im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255),
+    im_with_keypoints = cv.drawKeypoints(frameinverted, keypoints, np.array([]), (0, 0, 255),
                                           cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
     cv.imshow("Keypoints", im_with_keypoints)
 
