@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper,oldfontcommands]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage[dvips]{graphicx}
+\usepackage{xcolor}
+\usepackage{times}
+
+\usepackage[
+breaklinks=true,colorlinks=true,
+%linkcolor=blue,urlcolor=blue,citecolor=blue,% PDF VIEW
+linkcolor=black,urlcolor=black,citecolor=black,% PRINT
+bookmarks=true,bookmarksopenlevel=2]{hyperref}
+
+\usepackage{geometry}
+% PDF VIEW
+% \geometry{total={210mm,297mm},
+% left=25mm,right=25mm,%
+% bindingoffset=0mm, top=25mm,bottom=25mm}
+% PRINT
+\geometry{total={210mm,297mm},
+left=20mm,right=20mm,
+bindingoffset=10mm, top=25mm,bottom=25mm}
+
+\OnehalfSpacing
+%\linespread{1.3}
+
+%%% CHAPTER'S STYLE
+\chapterstyle{bianchi}
+%\chapterstyle{ger}
+%\chapterstyle{madsen}
+%\chapterstyle{ell}
+%%% STYLE OF SECTIONS, SUBSECTIONS, AND SUBSUBSECTIONS
+\setsecheadstyle{\Large\bfseries\sffamily\raggedright}
+\setsubsecheadstyle{\large\bfseries\sffamily\raggedright}
+\setsubsubsecheadstyle{\bfseries\sffamily\raggedright}
+
+
+%%% STYLE OF PAGES NUMBERING
+%\pagestyle{companion}\nouppercaseheads 
+%\pagestyle{headings}
+%\pagestyle{Ruled}
+\pagestyle{plain}
+\makepagestyle{plain}
+\makeevenfoot{plain}{\thepage}{}{}
+\makeoddfoot{plain}{}{}{\thepage}
+\makeevenhead{plain}{}{}{}
+\makeoddhead{plain}{}{}{}
+
+
+\maxsecnumdepth{subsection} % chapters, sections, and subsections are numbered
+\maxtocdepth{subsection} % chapters, sections, and subsections are in the Table of Contents
+
+
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+
+\begin{document}
+
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+%   TITLEPAGE
+%
+%   due to variety of titlepage schemes it is probably better to make titlepage manually
+%
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+\thispagestyle{empty}
+
+{%%%
+\sffamily
+\centering
+\Large
+
+~\vspace{\fill}
+
+{\huge 
+Studienarbeit Dokumentation
+}
+
+\vspace{2.5cm}
+
+{\LARGE
+Johanna Sommer
+}
+
+\vspace{3.5cm}
+
+Fakultät Informatik \\
+DHBW Stuttgart
+
+\vspace{3.5cm}
+
+Betreuer: Sebastian Trost
+
+\vspace{\fill}
+
+Juni 2019
+
+%%%
+}%%%
+
+\cleardoublepage
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+
+\tableofcontents
+
+\clearpage
+
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+
+\chapter{Einleitung}
+Specs: 
+Wissenschaftlicher Teil 10-15 Seiten
+Maximal 60 Seiten insgesamt
+OpenCV Tutorials dürfen zitiert werden
+\section{Kontext}
+Badminton, Hawkeye System, aktuelle Relevanz, vielleicht ausblick auf kommende Sensorik im Sport
+\section{Aufgabenstellung}
+genaue Aufgabenstellung, Abgrenzung der nicht erforderten Funktionalität, evtl. mit Herr Trost absprechen
+\section{Voraussetzungen}
+Umgebung, Kamera, Videoaufnahmen mit x Position
+
+\chapter{Wissenschaftlicher Teil}
+\section{Background Subtraction}
+Abgrenzung verschiedener Background Sub Methoden
+\section{Blob Detection}
+Parameter Testing
+
+\chapter{Umsetzung}
+\section{Framwork Auswahl}
+Blender weil animationstool mit python script support und sogar api, so kann eine teilautomatisierte Pipeline geschaffen werden
+\section{Design, Software Architektur}
+\section{Testing}
+
+\chapter{Schluss}
+\section{Ergebnisse}
+\section{Verbesserungen}
+\section{Ausblick}
+
+
+
+%todo fix bibliography
+\bibliographystyle{unsrt}
+\bibliography{sample}
+
+\end{document}
+
