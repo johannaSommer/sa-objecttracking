@@ -5,7 +5,7 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description='This program shows how to use background subtraction methods provided by \
                                               OpenCV. You can process both videos and images.')
-parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='Videos Start/einballwechsel.mp4')
+parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='videos_march/test1_edit.mp4')
 parser.add_argument('--algo', type=str, help='Background subtraction method (KNN, MOG2).', default='MOG2')
 args = parser.parse_args()
 
@@ -39,32 +39,24 @@ detector = cv.SimpleBlobDetector_create(params)
 f = open("data.csv", "w")
 f.write("")
 
-if args.algo == 'MOG2':
-    backSub = cv.createBackgroundSubtractorMOG2()
-else:
-    backSub = cv.createBackgroundSubtractorKNN()
-capture = cv.VideoCapture(args.input)
-if not capture.isOpened:
-    print('Unable to open: ' + args.input)
-    exit(0)
-while True:
-    ret, frame = capture.read()
-    if frame is None:
-        break
 
-    fgMask = backSub.apply(frame)
-    frameinverted = cv.bitwise_not(fgMask)
+
+capture = cv.VideoCapture(args.input)
+
+
 
     keypoints = detector.detect(frameinverted)
 
     im_with_keypoints = cv.drawKeypoints(frameinverted, keypoints, np.array([]), (0, 0, 255),
                                           cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
     cv.imshow("Keypoints", im_with_keypoints)
-    f = open("data.csv", "a")
-    #if len(keypoints) is 0:
-    # TODO actually calculate negative here
-    for x in keypoints:
-        f.write("-" + str(int(x.pt[1])) + " ; " + str(int(x.pt[0])) + "\n")
+
+    # f = open("data.csv", "a")
+    # #if len(keypoints) is 0:
+    # # TODO actually calculate negative here
+    # for x in keypoints:
+    #     f.write("-" + str(int(x.pt[1])) + " ; " + str(int(x.pt[0])) + "\n")
+
     keyboard = cv.waitKey(30)
     if keyboard == 'q' or keyboard == 27:
         break
