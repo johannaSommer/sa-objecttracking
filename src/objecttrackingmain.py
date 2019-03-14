@@ -5,7 +5,7 @@ import numpy as np
 
 parser = argparse.ArgumentParser(description='This program shows how to use background subtraction methods provided by \
                                               OpenCV. You can process both videos and images.')
-parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='Videos Start/einballwechsel2.mp4')
+parser.add_argument('--input', type=str, help='Path to a video or a sequence of image.', default='Videos Start/einballwechsel.mp4')
 parser.add_argument('--algo', type=str, help='Background subtraction method (KNN, MOG2).', default='MOG2')
 args = parser.parse_args()
 
@@ -16,23 +16,23 @@ params = cv.SimpleBlobDetector_Params()
 params.minThreshold = 10
 params.maxThreshold = 200
 filterByColor = False
+
 # Filter by Area.
 params.filterByArea = True
-params.minArea = 150
-params.maxArea = 200
+params.minArea = 40
+# params.maxArea = 200
 
 # Filter by Circularity
-# params.filterByCircularity = True
-# params.minCircularity = 0.1
+params.filterByCircularity = True
+params.minCircularity = 0.3
 
 # Filter by Convexity
 params.filterByConvexity = True
-params.minConvexity = 0.5
+params.minConvexity = 0.9
 
 # Filter by Inertia
 params.filterByInertia = True
-params.minInertiaRatio = 0.1
-params.maxInertiaRatio = 0.5
+params.minInertiaRatio = 0
 
 # Set up the detector with default parameters.
 detector = cv.SimpleBlobDetector_create(params)
