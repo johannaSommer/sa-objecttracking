@@ -1,5 +1,4 @@
 import cv2 as cv
-import time
 
 class Backgroundsub:
     def __init__(self, fileloc):
@@ -17,17 +16,21 @@ class Backgroundsub:
             cv.imshow("frameinverted", frameinverted)
 
     def savebgs(self):
-        out = cv.VideoWriter("backsubout/" + str(time.time()), -1, 20.0, (640, 480))
+        # TODO: fix
+        fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT)))/3)
+        video = cv.VideoWriter("forground.avi", cv.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, fsize)
+        if video.isOpened() is False:
+            print("nope")
         while True:
             ret, frame = self.cap.read()
             if frame is None:
                 break
             fgmask = self.backsub.apply(frame)
             frameinverted = cv.bitwise_not(fgmask)
-            out.write(frame)
-            cv.imshow("frameinverted", frameinverted)
+            video.write(frameinverted)
+            cv.imshow("framinverted", frameinverted)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
         self.cap.release()
-        out.release()
+        video.release()
         cv.destroyAllWindows()
