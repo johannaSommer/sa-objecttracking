@@ -18,7 +18,6 @@ class Backgroundsub:
 
     def savebgs(self):
         out = cv.VideoWriter("backsubout/" + str(time.time()), -1, 20.0, (640, 480))
-
         while True:
             ret, frame = self.cap.read()
             if frame is None:
@@ -29,7 +28,6 @@ class Backgroundsub:
             cv.imshow("frameinverted", frameinverted)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
-
         self.cap.release()
         out.release()
         cv.destroyAllWindows()
