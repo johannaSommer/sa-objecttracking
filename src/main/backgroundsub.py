@@ -17,8 +17,8 @@ class Backgroundsub:
 
     def savebgs(self):
         # TODO: fix
-        fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT)))/3)
-        video = cv.VideoWriter("forground.avi", cv.VideoWriter_fourcc('M', 'J', 'P', 'G'), 30, fsize)
+        fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
+        video = cv.VideoWriter("forground_Test.wmv", cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
         if video.isOpened() is False:
             print("nope")
         while True:
