@@ -3,7 +3,7 @@ import time
 
 class Backgroundsub:
     def __init__(self, fileloc):
-        self.infile = fileloc[:-1]
+        self.infile = fileloc[:-4]
         self.cap = cv.VideoCapture(fileloc)
         self.backsub = cv.createBackgroundSubtractorMOG2()
         self.backsub.setDetectShadows(0)
@@ -32,6 +32,8 @@ class Backgroundsub:
             frameinverted = cv.bitwise_not(fgmask)
             video.write(frameinverted)
             cv.imshow("framinverted", frameinverted)
+            if cv.waitKey(1) & 0xFF == ord('p'):
+                cv.imwrite(self.infile + "__" + str(time.time()) + ".jpg", frameinverted)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
         self.cap.release()
