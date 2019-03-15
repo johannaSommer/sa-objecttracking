@@ -47,7 +47,4 @@ class Blobdetection:
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
 
-
-    def savebd(self):
-        # TODO: implment saving similarily to
-        print("i have no programmed this path yet")
+# do I need a method here to save the video output?
