@@ -1,7 +1,9 @@
 import cv2 as cv
+import time
 
 class Backgroundsub:
     def __init__(self, fileloc):
+        self.infile = fileloc[:-4]
         self.cap = cv.VideoCapture(fileloc)
         self.backsub = cv.createBackgroundSubtractorMOG2()
         self.backsub.setDetectShadows(0)
@@ -18,7 +20,7 @@ class Backgroundsub:
     def savebgs(self):
         # TODO: fix
         fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
-        video = cv.VideoWriter("forground_Test.wmv", cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
+        video = cv.VideoWriter(self.infile + "__" + str(time.time()) + ".wmv", cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
         if video.isOpened() is False:
             print("nope")
         while True:
