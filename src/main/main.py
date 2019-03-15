@@ -43,8 +43,6 @@ f.write("")
 
 capture = cv.VideoCapture(args.input)
 
-
-
     keypoints = detector.detect(frameinverted)
 
     im_with_keypoints = cv.drawKeypoints(frameinverted, keypoints, np.array([]), (0, 0, 255),
@@ -56,7 +54,3 @@ capture = cv.VideoCapture(args.input)
     # # TODO actually calculate negative here
     # for x in keypoints:
     #     f.write("-" + str(int(x.pt[1])) + " ; " + str(int(x.pt[0])) + "\n")
-
-    keyboard = cv.waitKey(30)
-    if keyboard == 'q' or keyboard == 27:
-        break
