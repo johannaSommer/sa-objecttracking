@@ -2,18 +2,22 @@ import cv2 as cv
 import numpy as np
 
 class Blobdetection:
-    def __init__(self, fileloc):
-        self.cap = cv.VideoCapture(fileloc)
+    def __init__(self, fileloc, video):
+        self.infile = fileloc[:-4]
+        if video is True:
+            self.cap = cv.VideoCapture(fileloc)
+        else:
+            self.cap = cv.imread(fileloc)
         params = cv.SimpleBlobDetector_Params()
         params.minThreshold = 10
         params.maxThreshold = 200
         params.filterByArea = True
-        params.minArea = 40
-        # params.maxArea = 200
+        params.minArea = 100
+        params.maxArea = 500
         params.filterByCircularity = True
-        params.minCircularity = 0.3
+        params.minCircularity = 0.4
         params.filterByConvexity = True
-        params.minConvexity = 0.9
+        params.minConvexity = 0.5
         params.filterByInertia = True
         params.minInertiaRatio = 0
         self.detector = cv.SimpleBlobDetector_create(params)
@@ -25,6 +29,15 @@ class Blobdetection:
                 break
             keypoints = self.detector.detect(frame)
             im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+            cv.imshow("Keypoints", im_with_keypoints)
+            if cv.waitKey(1) & 0xFF == ord('q'):
+                break
+
+    def showbdimg(self):
+        keypoints = self.detector.detect(self.cap)
+        im_with_keypoints = cv.drawKeypoints(self.cap, keypoints, np.array([]), (0, 0, 255),
+                                             cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        while True:
             cv.imshow("Keypoints", im_with_keypoints)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
@@ -46,5 +59,3 @@ class Blobdetection:
             cv.imshow("Keypoints", im_with_keypoints)
             if cv.waitKey(1) & 0xFF == ord('q'):
                 break
-
-# do I need a method here to save the video output?

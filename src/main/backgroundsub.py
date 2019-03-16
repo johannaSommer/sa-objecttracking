@@ -18,7 +18,6 @@ class Backgroundsub:
             cv.imshow("frameinverted", frameinverted)
 
     def savebgs(self):
-        # TODO: fix
         fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
         outfile = self.infile + "__" + str(time.time()) + ".wmv"
         video = cv.VideoWriter(outfile, cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
