@@ -8,18 +8,19 @@ class Blobdetection:
             self.cap = cv.VideoCapture(fileloc)
         else:
             self.cap = cv.imread(fileloc)
+            print(fileloc)
         params = cv.SimpleBlobDetector_Params()
         params.minThreshold = 10
         params.maxThreshold = 200
         params.filterByArea = True
-        params.minArea = 100
-        params.maxArea = 500
+        params.minArea = 120
+        params.maxArea = 600
         params.filterByCircularity = True
-        params.minCircularity = 0.4
+        params.minCircularity = 0.3
         params.filterByConvexity = True
-        params.minConvexity = 0.5
+        params.minConvexity = 0.8
         params.filterByInertia = True
-        params.minInertiaRatio = 0
+        params.minInertiaRatio = 0.05
         self.detector = cv.SimpleBlobDetector_create(params)
 
     def showbd(self):
