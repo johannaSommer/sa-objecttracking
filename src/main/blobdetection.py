@@ -47,15 +47,9 @@ class Blobdetection:
         f.write("")
         while True:
             ret, frame = self.cap.read()
-            ogvideo = cv.VideoCapture("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\videos_march\snips\original\snip1_7.mp4")
-            retog, frameog = ogvideo.read()
             if frame is None:
                 break
             keypoints = self.detector.detect(frame)
-            for x in keypoints:
-                # take x.size into account here
-                if frameog.at(x.pt[0], x.pt[1]) < 150:
-                    keypoints.remove(x)
             im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
             f = open("data.csv", "a")
             # if len(keypoints) is 0:

@@ -13,12 +13,20 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{BackgroundSubtractorGMG}{section.2.1}% 13
 \BOOKMARK [2][-]{subsection.2.1.5}{Fazit/Begr\374ndung Auswahl}{section.2.1}% 14
 \BOOKMARK [1][-]{section.2.2}{Blob Detection}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.3}{Gl\344ttungsfunktion}{chapter.2}% 16
-\BOOKMARK [0][-]{chapter.3}{Umsetzung}{}% 17
-\BOOKMARK [1][-]{section.3.1}{Framwork Auswahl}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{Design, Software Architektur}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{Testing}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Schluss}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Ergebnisse}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Verbesserungen}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Ausblick}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.2.2.1}{Theorie}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Area}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{Circularity}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.4}{Inertia}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.5}{Convexity}{section.2.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.6}{Ergebnis}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.7}{Color}{section.2.2}% 22
+\BOOKMARK [1][-]{section.2.3}{Gl\344ttungsfunktion}{chapter.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Umsetzung}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Framwork Auswahl}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Design, Software Architektur}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{Testing}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Schluss}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Problemstellungen}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Ergebnisse}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.3}{Verbesserungen}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.4}{Ausblick}{chapter.4}% 32
