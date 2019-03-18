@@ -24,8 +24,8 @@ class Backgroundsub:
         self.detector = cv.SimpleBlobDetector_create(params)
 
     def applybgs(self):
-        f = open("data.csv", "w")
-        f.write("")
+        #f = open("data.csv", "w")
+        #f.write("")
         while True:
             ret, frame = self.cap.read()
             if frame is None:
