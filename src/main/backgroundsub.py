@@ -9,19 +9,6 @@ class Backgroundsub:
         self.cap = cv.VideoCapture(fileloc)
         self.backsub = cv.createBackgroundSubtractorMOG2()
         self.backsub.setDetectShadows(0)
-        params = cv.SimpleBlobDetector_Params()
-        params.minThreshold = 10
-        params.maxThreshold = 200
-        params.filterByArea = True
-        params.minArea = 120
-        params.maxArea = 600
-        params.filterByCircularity = True
-        params.minCircularity = 0.3
-        params.filterByConvexity = True
-        params.minConvexity = 0.8
-        params.filterByInertia = True
-        params.minInertiaRatio = 0.05
-        self.detector = cv.SimpleBlobDetector_create(params)
 
     def applybgs(self):
         while True:

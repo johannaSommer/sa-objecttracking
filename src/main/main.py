@@ -2,7 +2,7 @@ from backgroundsub import Backgroundsub
 from blobdetection import Blobdetection
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'backsubbed', 'snip1_3.mp4')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'backsubbed', 'snip2_0__1552679466.38.wmv')
 
 filelist = os.listdir(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'framex'))
 
@@ -10,6 +10,6 @@ filelist = os.listdir(os.path.join(os.path.dirname(os.path.dirname(__file__)), '
 #for x in filelist:
 #    Blobdetection(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'framex', x), False).showbdimg()
 
-Backgroundsub(BASEPATH).applybgs()
-#blobdec = Blobdetection(BASEPATH, True).applybd()
+#Backgroundsub(BASEPATH).applybgs()
+blobdec = Blobdetection(BASEPATH, True).showbd()
 
