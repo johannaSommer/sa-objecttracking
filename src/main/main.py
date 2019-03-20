@@ -2,7 +2,7 @@ from backgroundsub import Backgroundsub
 from blobdetection import Blobdetection
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'backsubbed', 'snip2_0__1552679466.38.wmv')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'backsubbed', 'snip1_7__1552679299.96.wmv')
 
 filelist = os.listdir(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'framex'))
 

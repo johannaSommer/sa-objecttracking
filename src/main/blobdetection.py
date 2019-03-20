@@ -18,14 +18,14 @@ class Blobdetection:
         params.filterByCircularity = True
         params.minCircularity = 0.3
         params.filterByConvexity = True
-        params.minConvexity = 0.8
+        params.minConvexity = 0.5
         params.filterByInertia = True
         params.minInertiaRatio = 0.05
         self.detector = cv.SimpleBlobDetector_create(params)
-        self.threshold = 300
+        self.threshold = 400
 
     def showbd(self):
-        #traj_list=[[[kp, kp, kp], 2],[kp, kp, kp], 5]
+        #traj_list=[[[kp, kp, kp], 2, c],[kp, kp, kp], 5, o]
         traj_list=[]
         while True:
             ret, frame = self.cap.read()
@@ -35,29 +35,34 @@ class Blobdetection:
 
             max = [10000, -1]
             for ind, traj in enumerate(traj_list):
-                traj_list[ind][1] += 1
+                if traj_list[ind][2] == 'o':
+                    traj_list[ind][1] += 1
             for kp in keypoints:
                 for ind, traj in enumerate(traj_list):
-                    dist = distance(kp, traj[0][-1])
-                    if dist<max:
-                        max=[dist, ind]
-                if max[0]>self.threshold:
-                    traj_list.append([[kp], 0])
+                    if traj[2] == 'o':
+                        dist = distance(kp, traj[0][-1])
+                        if dist < max:
+                            max = [dist, ind]
+                if max[0] > self.threshold:
+                    traj_list.append([[kp], 0, 'o'])
                 else:
                     traj_list[max[1]][0].append(kp)
                     traj_list[max[1]][1] = 0
+            for traj in traj_list:
+                if traj[1] > 15:
+                    traj[2] = 'c'
 
             im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
             cv.imshow("Keypoints", im_with_keypoints)
-            if cv.waitKey(1) & 0xFF == ord('q'):
-                # f = open("data.csv", "w")
-                # f.write("")
-                # f = open("data.csv", "a")
-                # for traj in traj_list:
-                #     for kp in traj[0]:
-                #         f.write("-" + str(int(kp.pt[1])) + " ; " + str(int(kp.pt[0])) + "\n")
-                #     f.write("---- \n \n")
-                break
+            for traj in traj_list:
+                image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\snip2_0__1552679476.08.jpg")
+                im_with_traj = cv.drawKeypoints(image, traj[0], np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+                while True:
+                    cv.imshow("traj", im_with_traj)
+                    if cv.waitKey(1) & 0xFF == ord('q'):
+                        print(traj_list)
+                        break
+            break
 
     def showbdimg(self):
         keypoints = self.detector.detect(self.cap)
