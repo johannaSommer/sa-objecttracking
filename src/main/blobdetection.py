@@ -54,15 +54,16 @@ class Blobdetection:
 
             im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
             cv.imshow("Keypoints", im_with_keypoints)
-            for traj in traj_list:
-                image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\snip2_0__1552679476.08.jpg")
-                im_with_traj = cv.drawKeypoints(image, traj[0], np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-                while True:
-                    cv.imshow("traj", im_with_traj)
-                    if cv.waitKey(1) & 0xFF == ord('q'):
-                        print(traj_list)
-                        break
-            break
+            if cv.waitKey(1) & 0xFF == ord('q'):
+                for traj in traj_list:
+                    image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\snip2_0__1552679476.08.jpg")
+                    im_with_traj = cv.drawKeypoints(image, traj[0], np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+                    while True:
+                        cv.imshow("traj", im_with_traj)
+                        if cv.waitKey(1) & 0xFF == ord('q'):
+                            break
+                break
+
 
     def showbdimg(self):
         keypoints = self.detector.detect(self.cap)
