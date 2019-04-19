@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700 64-bit) (preloaded format=pdflatex 2018.6.6)  18 MAR 2019 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6700 64-bit) (preloaded format=pdflatex 2018.6.6)  22 MAR 2019 12:28
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -817,17 +817,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 (content/Methode.aux) (content/Schluss.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: CFB9AD873DEEC47977E7654E03BBB95F;2006.
 
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: CFB9AD873DEEC47977E7654E03BBB95F;2006
+(rerunfilecheck)             After:  282BD2590CA16A8F1DF462C7C1998F86;2060.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
  ) 
 Here is how much of TeX's memory you used:
- 11293 strings out of 492974
- 170087 string characters out of 3124936
+ 11294 strings out of 492974
+ 170103 string characters out of 3124936
  330386 words of memory out of 3000000
  14958 multiletter control sequences out of 15000+200000
  50690 words of font info for 77 fonts, out of 3000000 for 9000
@@ -841,9 +847,9 @@ e1/urw/helvetic/uhvr8a.pfb><C:/Users/IBM_ADMIN/AppData/Local/Programs/MiKTeX 2.
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/IBM_ADMIN/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/IBM_ADMIN/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (11 pages, 94476 bytes).
+Output written on thesis.pdf (11 pages, 94578 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
  17665 words of extra memory for PDF output out of 20736 (max. 10000000)
 
