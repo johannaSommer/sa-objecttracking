@@ -14,12 +14,12 @@ class Blobdetection:
         params.maxThreshold = 200
         params.filterByArea = True
         params.minArea = 120
-        params.maxArea = 600
+        params.maxArea = 700
         params.filterByCircularity = True
         params.minCircularity = 0.3
         params.filterByConvexity = True
         params.minConvexity = 0.5
-        params.filterByInertia = True
+        params.filterByInertia = False
         params.minInertiaRatio = 0.05
         self.detector = cv.SimpleBlobDetector_create(params)
         self.threshold = 400
