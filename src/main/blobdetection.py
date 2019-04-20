@@ -39,15 +39,15 @@ class Blobdetection:
 
             for kp in keypoints:
                 # manage return of function here
-                match_traj(kp, active_traj_list, self.threshold, frame_num)
+                active_traj_list = match_traj(kp, active_traj_list, self.threshold, frame_num)
 
-            for traj in active_traj_list:
-                if traj[1] > 15:
-                    if len(traj[0]) < 5:
-                        active_traj_list.remove(traj)
-                    else:
-                        dep_traj_list.append(traj)
-                        active_traj_list.remove(traj)
+                for traj in active_traj_list:
+                    if (traj[1] - frame_num) > 15:
+                        if len(traj[0]) < 5:
+                            active_traj_list.remove(traj)
+                        else:
+                            dep_traj_list.append(traj)
+                            active_traj_list.remove(traj)
 
             # im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
             # cv.imshow("Keypoints", im_with_keypoints)

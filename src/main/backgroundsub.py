@@ -1,7 +1,6 @@
 import cv2 as cv
 import time
 import numpy as np
-from utils import islight
 
 class Backgroundsub:
     def __init__(self, fileloc):

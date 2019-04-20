@@ -4,25 +4,28 @@ def match_traj(keypoint, list, threshold, frame_num):
     max = [10000, -1]
     sub = False
     for ind, traj in enumerate(list):
-        if traj[0][-1] == frame_num:
+        if traj[1] == frame_num:
             index = len(traj[0])
-            dist = distance(keypoint, traj[0][index-1])
+            dist = distance(keypoint, traj[0][index - 2])
             if dist < max:
-                if distance(keypoint, traj[0][index - 1]) < distance(traj[0][-1], traj[0][index - 1]):
+                if distance(keypoint, traj[0][index - 2]) < distance(traj[0][-1], traj[0][index - 2]):
                     max = [dist, ind]
                     sub = traj[0][-1]
         else:
             dist = distance(keypoint, traj[0][-1])
-            if dist < max:
+            if dist < max[1]:
                 max = [dist, ind]
+                sub = False
 
     if max[0] > threshold:
-        list.append([[keypoint], 0])
+        list.append([[keypoint], frame_num])
+        return list
 
     else:
         list[max[1]][0].append(keypoint)
-        list[max[1]][1] = 0
+        list[max[1]][1] = frame_num
         if sub is not False:
+            list[max[1]][0].remove(sub)
             return match_traj(sub, list, threshold, frame_num)
         else:
             return list
