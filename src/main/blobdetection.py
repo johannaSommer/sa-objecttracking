@@ -39,7 +39,7 @@ class Blobdetection:
 
             for kp in keypoints:
                 # manage return of function here
-                match_traj(kp, active_traj_list, self.threshold)
+                match_traj(kp, active_traj_list, self.threshold, frame_num)
 
             for traj in active_traj_list:
                 if traj[1] > 15:

@@ -1,20 +1,31 @@
 import math
 
-def match_traj(keypoint, list, threshold):
+def match_traj(keypoint, list, threshold, frame_num):
     max = [10000, -1]
+    sub = False
     for ind, traj in enumerate(list):
-        #heck here for the last keypoint that IT NOT FROM CURRENT FRAME
-        dist = distance(keypoint, traj[0][-1])
-        if dist < max:
-            max = [dist, ind]
+        if traj[0][-1] == frame_num:
+            index = len(traj[0])
+            dist = distance(keypoint, traj[0][index-1])
+            if dist < max:
+                if distance(keypoint, traj[0][index - 1]) < distance(traj[0][-1], traj[0][index - 1]):
+                    max = [dist, ind]
+                    sub = traj[0][-1]
+        else:
+            dist = distance(keypoint, traj[0][-1])
+            if dist < max:
+                max = [dist, ind]
+
     if max[0] > threshold:
-        # check if its a new frame, if yes just keep going
-        # if already a keypoint from current frame check max distance
-        # if keypoint needs to be substituted, save kp and run matching again recursively
         list.append([[keypoint], 0])
+
     else:
         list[max[1]][0].append(keypoint)
         list[max[1]][1] = 0
+        if sub is not False:
+            return match_traj(sub, list, threshold, frame_num)
+        else:
+            return list
 
 
 
