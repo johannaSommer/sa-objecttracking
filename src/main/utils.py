@@ -13,7 +13,7 @@ def match_traj(keypoint, list, threshold, frame_num):
                     sub = traj[0][-1]
         else:
             dist = distance(keypoint, traj[0][-1])
-            if dist < max[1]:
+            if dist < max[0]:
                 max = [dist, ind]
                 sub = False
 
