@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 from utils import distance
+from utils import match_traj
 
 class Blobdetection:
     def __init__(self, fileloc, video):
@@ -25,44 +26,40 @@ class Blobdetection:
         self.threshold = 400
 
     def showbd(self):
-        #traj_list=[[[kp, kp, kp], 2, c],[kp, kp, kp], 5, o]
-        traj_list=[]
+        #active_traj_list=[[[kp, kp, kp], current_frame],[kp, kp, kp], current_frame]
+        active_traj_list = []
+        dep_traj_list = []
+        frame_num = 0
         while True:
             ret, frame = self.cap.read()
             if frame is None:
                 break
+            frame_num += 1
             keypoints = self.detector.detect(frame)
 
-            max = [10000, -1]
-            for ind, traj in enumerate(traj_list):
-                if traj_list[ind][2] == 'o':
-                    traj_list[ind][1] += 1
             for kp in keypoints:
-                for ind, traj in enumerate(traj_list):
-                    if traj[2] == 'o':
-                        dist = distance(kp, traj[0][-1])
-                        if dist < max:
-                            max = [dist, ind]
-                if max[0] > self.threshold:
-                    traj_list.append([[kp], 0, 'o'])
-                else:
-                    traj_list[max[1]][0].append(kp)
-                    traj_list[max[1]][1] = 0
-            for traj in traj_list:
-                if traj[1] > 15:
-                    traj[2] = 'c'
+                # manage return of function here
+                match_traj(kp, active_traj_list, self.threshold)
 
-            im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-            cv.imshow("Keypoints", im_with_keypoints)
-            if cv.waitKey(1) & 0xFF == ord('q'):
-                for traj in traj_list:
-                    image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\snip2_0__1552679476.08.jpg")
-                    im_with_traj = cv.drawKeypoints(image, traj[0], np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-                    while True:
-                        cv.imshow("traj", im_with_traj)
-                        if cv.waitKey(1) & 0xFF == ord('q'):
-                            break
-                break
+            for traj in active_traj_list:
+                if traj[1] > 15:
+                    if len(traj[0]) < 5:
+                        active_traj_list.remove(traj)
+                    else:
+                        dep_traj_list.append(traj)
+                        active_traj_list.remove(traj)
+
+            # im_with_keypoints = cv.drawKeypoints(frame, keypoints, np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+            # cv.imshow("Keypoints", im_with_keypoints)
+            # if cv.waitKey(1) & 0xFF == ord('q'):
+            #     for traj in active_traj_list:
+            #         image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\snip2_0__1552679476.08.jpg")
+            #         im_with_traj = cv.drawKeypoints(image, traj[0], np.array([]), (0, 0, 255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+            #         while True:
+            #             cv.imshow("traj", im_with_traj)
+            #             if cv.waitKey(1) & 0xFF == ord('q'):
+            #                 break
+            #     break
 
 
     def showbdimg(self):

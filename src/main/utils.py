@@ -1,22 +1,41 @@
 import math
 
-def islight(x, frame):
-    point1 = x.pt
-    x1 = int(point1[0])
-    y1 = int(point1[1])
-    R = int(frame[y1, x1][1])
-    B = int(frame[y1, x1][0])
-    G = int(frame[y1, x1][2])
-    if (R+G+B)/3 > 230:
-        print('over: ' + str(R) + " " + str(G) + " " + str(B))
-        return True
-    if abs(R-B)<50 and abs(R-G)<50 and abs(G-B)<50 and R>120 and G>120 and B>120:
-        print(R, G, B)
-        return True
-    return
+def match_traj(keypoint, list, threshold):
+    max = [10000, -1]
+    for ind, traj in enumerate(list):
+        #heck here for the last keypoint that IT NOT FROM CURRENT FRAME
+        dist = distance(keypoint, traj[0][-1])
+        if dist < max:
+            max = [dist, ind]
+    if max[0] > threshold:
+        # check if its a new frame, if yes just keep going
+        # if already a keypoint from current frame check max distance
+        # if keypoint needs to be substituted, save kp and run matching again recursively
+        list.append([[keypoint], 0])
+    else:
+        list[max[1]][0].append(keypoint)
+        list[max[1]][1] = 0
+
+
 
 def distance(kp, traj):
     weight = 0.1
     co_eucd = math.sqrt(math.pow((kp.pt[0]-traj.pt[0]), 2) + math.pow((kp.pt[1]-traj.pt[1]), 2))
     area_eucd = math.sqrt(pow(((pow((kp.size/2), 2)*math.pi)-(pow((traj.size/2), 2)*math.pi)), 2))
     return (1-weight) * co_eucd + weight * area_eucd
+
+
+# def islight(x, frame):
+#     point1 = x.pt
+#     x1 = int(point1[0])
+#     y1 = int(point1[1])
+#     R = int(frame[y1, x1][1])
+#     B = int(frame[y1, x1][0])
+#     G = int(frame[y1, x1][2])
+#     if (R+G+B)/3 > 230:
+#         print('over: ' + str(R) + " " + str(G) + " " + str(B))
+#         return True
+#     if abs(R-B)<50 and abs(R-G)<50 and abs(G-B)<50 and R>120 and G>120 and B>120:
+#         print(R, G, B)
+#         return True
+#     return
