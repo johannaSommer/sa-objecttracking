@@ -1,5 +1,5 @@
-from backgroundsub import Backgroundsub
-from blobdetection import Blobdetection
+from BackgroundSubtraction import Backgroundsub
+from BlobDetection import Blobdetection
 import os
 
 BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'SYNC', 'sync_1_2bgs.wmv')
@@ -10,6 +10,6 @@ filelist = os.listdir(os.path.join(os.path.dirname(os.path.dirname(__file__)), '
 #for x in filelist:
 #    Blobdetection(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'framex', x), False).showbdimg()
 #Backgroundsub(BASEPATH).savebgs()
-blobdec = Blobdetection(BASEPATH, True).showbd()
+blobdec = Blobdetection(BASEPATH, True, False).showbd()
 
 
