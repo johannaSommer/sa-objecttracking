@@ -16,5 +16,5 @@ class DataHandler:
         f.write("")
         f = open("data.csv", "a")
         for x in trajectory[0]:
-            f.write(str(-int(x.pt[1])) + " ; " + str(int(x.pt[0])))
+            f.write(str(int(x.pt[0])) + " ; " + str(-int(x.pt[1])))
             f.write("\n")
