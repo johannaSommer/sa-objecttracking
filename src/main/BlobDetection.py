@@ -27,7 +27,7 @@ class Blobdetection:
         self.added = added
 
     def showbd(self):
-        #active_traj_list=[[[kp, kp, kp], current_frame],[kp, kp, kp], current_frame]
+        #active_traj_list=[[[[kp, frame], [kp, frame], [kp, frame]], current_frame],[kp, kp, kp], current_frame]
         active_traj_list = []
         dep_traj_list = []
         frame_num = 0
@@ -40,7 +40,7 @@ class Blobdetection:
 
             for kp in keypoints:
                 # manage return of function here
-                active_traj_list = match_traj(kp, active_traj_list, self.threshold, frame_num)
+                active_traj_list = match_traj(kp, active_traj_list, self.threshold, frame_num, False)
 
                 for traj in active_traj_list:
                     if (traj[1] - frame_num) > 15:
