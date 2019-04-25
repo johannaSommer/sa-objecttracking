@@ -1,0 +1,36 @@
+import bpy
+
+file = open('data2.csv')
+traits = file.readlines()
+out = []
+out2 = []
+
+for x in traits:
+    out.append(x.split(';'))
+    
+for ind, a in enumerate(out):
+    if ind == 0: 
+        if a == ['\n']:
+            out2.append([0, 0, 0])
+        else:
+            out2.append([float(a[0])/100, float(a[1]/100), float(a[2].strip('\n'))/100])
+    elif a == ['\n']:
+        out2.append(out2[ind-1])
+    elif len(a) == 2:
+        out2.append([float(a[0])/100, float(a[1].strip('\n'))/100, out2[ind-1][2]])
+    elif a[0] == ' ' and a[1] == '  ':
+        out2.append([out2[ind-1][0], out2[ind-1][1], float(a[2].strip('\n'))/100])
+    else:
+        print(a)
+        out2.append([float(a[0])/100, float(a[1])/100, float(a[2].strip('\n'))/100])
+
+start_pos = (0,0,0)
+
+ob = bpy.data.objects["Sphere"]
+
+frame_num = 0
+for position in out2:
+    bpy.context.scene.frame_set(frame_num)
+    ob.location = position
+    ob.keyframe_insert(data_path="location", index=-1)
+    frame_num += 1
