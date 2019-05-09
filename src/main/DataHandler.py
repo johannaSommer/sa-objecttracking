@@ -48,5 +48,9 @@ class DataHandler:
                     f.write("\n")
             else:
                 while counter < x[1]:
+                    print(x[1])
+                    print(len(exi))
+                    print(counter-1)
+                    print(exi[counter-1])
                     f.write(exi[counter-1])
                     counter += 1
