@@ -15,18 +15,17 @@ class Blobdetection:
         params.maxThreshold = 200
         params.filterByArea = True
         params.minArea = 70
-        # params.maxArea = 700
-        params.maxArea = 900
+        params.maxArea = 700
+        #params.maxArea = 900
         params.filterByCircularity = True
-        #params.minCircularity = 0.3
-        params.minCircularity = 0.2
+        params.minCircularity = 0.3
+       # params.minCircularity = 0.2
         params.filterByConvexity = True
         params.minConvexity = 0.0
         params.filterByInertia = False
         params.minInertiaRatio = 0.05
         self.detector = cv.SimpleBlobDetector_create(params)
-        # self.threshold = 150
-        self.threshold = 250
+        self.threshold = 150
         self.added = added
 
     def showbd(self, long):
@@ -57,13 +56,7 @@ class Blobdetection:
             cv.imshow("Keypoints", im_with_keypoints)
 
             if cv.waitKey(1) & 0xFF == ord('q'):
-                if self.added is True:
-                    maximum1 = max(active_traj_list, key=lambda i: len(i[0]))
-                    active_traj_list.remove(maximum1)
-                    maximum2 = max(active_traj_list, key=lambda i: len(i[0]))
-                    out = maximum1[0] + maximum2[0]
-                else:
-                    out = max(active_traj_list, key=lambda i: len(i[0]))
+                out = max(active_traj_list, key=lambda i: len(i[0]))
                 normalized = []
                 if self.added == False:
                     for x in out[0]:
@@ -71,8 +64,8 @@ class Blobdetection:
                             normalized.append(x[0])
                 else:
                     for x in out:
-                        if type(x) != int:
-                            normalized.append(x[0])
+                       if type(x) != int:
+                           normalized.append(x[0])
                 if long == True:
                     image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\main\laenge.jpg")
                 else:
@@ -82,7 +75,6 @@ class Blobdetection:
                 while True:
                     cv.imshow("traj", im_with_traj)
                     if cv.waitKey(1) & 0xFF == ord('q'):
-                        print(dep_traj_list)
                         break
                 return out
 
