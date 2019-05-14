@@ -1,10 +1,10 @@
 import cv2 as cv
 import numpy as np
 from utils import match_traj
-
+from datahandling import  writetocsv
 
 class Blobdetection:
-    def __init__(self, fileloc, video, added):
+    def __init__(self, fileloc, video):
         self.infile = fileloc[:-4]
         if video is True:
             self.cap = cv.VideoCapture(fileloc)
@@ -19,14 +19,13 @@ class Blobdetection:
         #params.maxArea = 900
         params.filterByCircularity = True
         params.minCircularity = 0.3
-       # params.minCircularity = 0.2
+        # params.minCircularity = 0.2
         params.filterByConvexity = True
         params.minConvexity = 0.0
         params.filterByInertia = False
         params.minInertiaRatio = 0.05
         self.detector = cv.SimpleBlobDetector_create(params)
         self.threshold = 150
-        self.added = added
 
     def showbd(self, long):
         #active_traj_list=[[[[kp, frame], [kp, frame], [kp, frame]], current_frame],[kp, kp, kp], current_frame]
@@ -64,8 +63,8 @@ class Blobdetection:
                             normalized.append(x[0])
                 else:
                     for x in out:
-                       if type(x) != int:
-                           normalized.append(x[0])
+                        if type(x) != int:
+                            normalized.append(x[0])
                 if long == True:
                     image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\main\laenge.jpg")
                 else:
@@ -83,6 +82,8 @@ class Blobdetection:
         keypoints = self.detector.detect(self.cap)
         im_with_keypoints = cv.drawKeypoints(self.cap, keypoints, np.array([]), (0, 0, 255),
                                              cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        for x in keypoints:
+            print(x.pt)
         while True:
             cv.imshow("Keypoints", im_with_keypoints)
             if cv.waitKey(1) & 0xFF == ord('q'):
