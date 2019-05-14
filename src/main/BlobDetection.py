@@ -42,7 +42,6 @@ class Blobdetection:
             for kp in keypoints:
                 # manage return of function here
                 active_traj_list = match_traj(kp, active_traj_list, self.threshold, frame_num, False)
-
                 for traj in active_traj_list:
                     if (traj[1] - frame_num) > 15:
                         if len(traj[0]) < 30:
@@ -57,14 +56,9 @@ class Blobdetection:
             if cv.waitKey(1) & 0xFF == ord('q'):
                 out = max(active_traj_list, key=lambda i: len(i[0]))
                 normalized = []
-                if self.added == False:
-                    for x in out[0]:
-                        if type(x) != int:
-                            normalized.append(x[0])
-                else:
-                    for x in out:
-                        if type(x) != int:
-                            normalized.append(x[0])
+                for x in out[0]:
+                    if type(x) != int:
+                        normalized.append(x[0])
                 if long == True:
                     image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\main\laenge.jpg")
                 else:
