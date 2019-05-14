@@ -5,7 +5,7 @@ from datahandling import redim
 from datahandling import datacleanse
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'test.csv')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8.csv')
 # BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),  'test.png')
 
 # qfilelist = os.listdir(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos_march', 'snips', 'framex'))
@@ -20,4 +20,5 @@ BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos
 #DataHandler().adddimension(trajectory2)
 #redim(BASEPATH)
 datacleanse(BASEPATH)
+redim(BASEPATH)
 

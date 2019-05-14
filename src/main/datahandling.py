@@ -98,4 +98,4 @@ def redim(fileloc):
         split = strip.split(';')
         f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915) + " ; " + str(int(split[2]) - 1920))
         f.write("\n")
-    k += 1
+        k += 1
