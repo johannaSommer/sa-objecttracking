@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/datahandling.py" line="45" mnemonic="7" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/datahandling.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/datahandling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+            <state relative-caret-position="495">
+              <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -313,12 +314,12 @@
       <workItem from="1557750009901" duration="1517000" />
       <workItem from="1557836616129" duration="1999000" />
       <workItem from="1557845391633" duration="2472000" />
-      <workItem from="1557847877701" duration="396000" />
+      <workItem from="1557847877701" duration="771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27505000" />
+    <option name="totallyTimeSpent" value="27880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1929" y="-540" width="1938" height="1218" extended-state="6" />
@@ -351,15 +352,6 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main/datahandling.py</url>
-          <line>50</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="traj_list[0][2]" />
@@ -425,8 +417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
+        <state relative-caret-position="495">
+          <caret line="62" column="14" lean-forward="true" selection-start-line="62" selection-start-column="14" selection-end-line="62" selection-end-column="14" />
         </state>
       </provider>
     </entry>

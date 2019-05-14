@@ -94,14 +94,8 @@ def redim(fileloc):
     k = 0
     print(exi)
     while k < len(exi):
-        if exi[k] != '\n' or exi[k] != ';;':
-            strip = exi[k].strip("\n")
-            split = strip.split(';')
-            if split != ['', '', '']:
-                if split[2] == '':
-                    f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915))
-                    f.write("\n")
-                else:
-                    f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915) + " ; " + str(int(split[2]) - 1920))
-                    f.write("\n")
-        k += 1
+        strip = exi[k].strip("\n")
+        split = strip.split(';')
+        f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915) + " ; " + str(int(split[2]) - 1920))
+        f.write("\n")
+    k += 1
