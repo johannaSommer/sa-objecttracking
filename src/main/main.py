@@ -2,6 +2,7 @@ from BackgroundSubtraction import Backgroundsub
 from BlobDetection import Blobdetection
 from datahandling import writetocsv
 from datahandling import redim
+from datahandling import datacleanse
 import os
 
 BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'test.csv')
@@ -17,6 +18,6 @@ BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos
 #qwritetocsv(trajectory, False, True)
 #trajectory2 = Blobdetection(BASEPATH2, True, False).showbd()
 #DataHandler().adddimension(trajectory2)
-redim(BASEPATH)
-
+#redim(BASEPATH)
+datacleanse(BASEPATH)
 

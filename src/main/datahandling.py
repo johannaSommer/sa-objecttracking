@@ -40,9 +40,50 @@ def adddimension(trajectory):
                 f.write(exi[counter-1])
                 counter += 1
 
-def datacleanse():
-    # TODO: to be implemented
-    print('hello')
+def datacleanse(fileloc):
+    file = open(fileloc)
+    exi = file.readlines()
+    f = open(fileloc, "w")
+    f.write("")
+    f = open(fileloc, "a")
+    k = 0
+    while k < len(exi):
+        strip = exi[k].strip("\n")
+        if strip == ';;':
+            exi[k] = [0, 0, 0]
+        else:
+            strip = exi[k].strip("\n")
+            split = strip.split(';')
+            if split[2] == '':
+                exi[k] = [split[0], split[1], 0]
+            elif split[0] == '' and split[1] == '':
+                exi[k] = [0, 0, split[2]]
+            else:
+                exi[k] = [split[0], split[1], split[2]]
+        k += 1
+    dimensions = [0, 1, 2]
+    for dim in dimensions:
+        k = 0
+        while k < len(exi):
+            if exi[k][dim] == 0:
+                counter = 1
+                final = 0
+                while counter + k < len(exi):
+                    if exi[counter + k][dim] != 0:
+                        final = exi[counter + k][dim]
+                        break
+                    else:
+                        counter += 1
+                steps = (int(final) - int(exi[k-1][dim]))/(counter+1)
+                i = 0
+                while i < counter:
+                    exi[k + i][dim] = int(exi[k-1][dim]) + (steps * (i + 1))
+                    i += 1
+                k += counter
+            k += 1
+    for x in exi:
+        f.write(str(x[0]) + ';' + str(x[1]) + ';' + str(x[2]) + '\n')
+
 
 def redim(fileloc):
     file = open(fileloc)
@@ -58,11 +99,9 @@ def redim(fileloc):
             split = strip.split(';')
             if split != ['', '', '']:
                 if split[2] == '':
-                    print(split)
                     f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915))
                     f.write("\n")
                 else:
-                    print(split)
                     f.write(str(int(split[0]) - 315) + " ; " + str(int(split[1]) + 915) + " ; " + str(int(split[2]) - 1920))
                     f.write("\n")
         k += 1
