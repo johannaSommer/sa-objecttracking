@@ -4,30 +4,37 @@ from utils import match_traj
 from datahandling import  writetocsv
 
 class Blobdetection:
-    def __init__(self, fileloc, video):
+    def __init__(self, fileloc, video, long):
         self.infile = fileloc[:-4]
         if video is True:
             self.cap = cv.VideoCapture(fileloc)
         else:
             self.cap = cv.imread(fileloc)
+        self. long = long
+
         params = cv.SimpleBlobDetector_Params()
         params.minThreshold = 10
         params.maxThreshold = 200
         params.filterByArea = True
-        params.minArea = 70
-        params.maxArea = 700
-        #params.maxArea = 900
         params.filterByCircularity = True
-        params.minCircularity = 0.3
-        # params.minCircularity = 0.2
         params.filterByConvexity = True
-        params.minConvexity = 0.0
         params.filterByInertia = False
+        if self.long == True:
+            params.minArea = 70
+            params.maxArea = 700
+            params.minCircularity = 0.3
+        else:
+            params.minArea = 100
+            # params.minArea = 150
+            params.maxArea = 900
+            params.minCircularity = 0.2
+        params.minConvexity = 0.0
         params.minInertiaRatio = 0.05
+
         self.detector = cv.SimpleBlobDetector_create(params)
         self.threshold = 150
 
-    def showbd(self, long):
+    def showbd(self):
         #active_traj_list=[[[[kp, frame], [kp, frame], [kp, frame]], current_frame],[kp, kp, kp], current_frame]
         active_traj_list = []
         dep_traj_list = []
@@ -59,7 +66,7 @@ class Blobdetection:
                 for x in out[0]:
                     if type(x) != int:
                         normalized.append(x[0])
-                if long == True:
+                if self.long == True:
                     image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\main\laenge.jpg")
                 else:
                     image = cv.imread("C:\Users\IBM_ADMIN\Desktop\GitHub\sa-objecttracking\src\main\lbreite.PNG")
@@ -76,8 +83,6 @@ class Blobdetection:
         keypoints = self.detector.detect(self.cap)
         im_with_keypoints = cv.drawKeypoints(self.cap, keypoints, np.array([]), (0, 0, 255),
                                              cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        for x in keypoints:
-            print(x.pt)
         while True:
             cv.imshow("Keypoints", im_with_keypoints)
             if cv.waitKey(1) & 0xFF == ord('q'):
