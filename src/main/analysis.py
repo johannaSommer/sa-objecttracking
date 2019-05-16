@@ -2,7 +2,47 @@ import math
 
 
 def determine_speed(og_file, new_file):
-    print('hello')
+    file = open(og_file)
+    og = file.readlines()
+    file = open(new_file)
+    new = file.readlines()
+    f = open(new_file, "w")
+    f.write("")
+    f = open(new_file, "a")
+    k = 0
+    while k < len(og):
+        strip = og[k].strip("\n")
+        if strip == ';;':
+            og[k] = [0, 0, 0]
+        else:
+            strip = og[k].strip("\n")
+            split = strip.split(';')
+            if split[2] == '':
+                og[k] = [split[0], split[1], 0]
+            elif split[0] == '' and split[1] == '':
+                og[k] = [0, 0, split[2]]
+            else:
+                og[k] = [split[0], split[1], split[2]]
+        k += 1
+    counter = 0
+    for ind, row in enumerate(og):
+        if row[1] != 0 and row[2] != 0:
+            if counter > 1:
+                distance = math.sqrt(abs(int(row[2]) - int(og[ind-2][2]))**2 + abs(int(row[1]) - int(og[ind-2][1]))**2)
+                distance_conv = distance * 0.0067
+                # returns m/s
+                speed = distance_conv / 0.0048
+                strip = new[ind].strip('\n')
+                f.write(strip + ';' + str(int(speed)))
+                f.write('\n')
+            else:
+                counter += 1
+                f.write(new[ind])
+        else:
+            counter = 0
+            f.write(new[ind])
+
+
 
 def categorize(fileloc):
     file = open(fileloc)

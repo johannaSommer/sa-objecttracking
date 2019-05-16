@@ -4,10 +4,11 @@ from datahandling import writetocsv
 from datahandling import redim
 from datahandling import datacleanse
 from analysis import categorize
+from analysis import determine_speed
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_1.csv')
-# BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),  'test.png')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_1_og.csv')
+BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_1.csv')
 
 
 #Backgroundsub(BASEPATH).savebgs()
@@ -18,6 +19,6 @@ BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos
 #redim(BASEPATH)
 # datacleanse(BASEPATH)
 # redim(BASEPATH)
-categorize(BASEPATH)
-
+# categorize(BASEPATH)
+determine_speed(BASEPATH, BASEPATH2)
 
