@@ -7,8 +7,8 @@ from analysis import categorize
 from analysis import determine_speed
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_1_og.csv')
-BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_1.csv')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8_og.csv')
+BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8.csv')
 
 
 #Backgroundsub(BASEPATH).savebgs()
@@ -19,6 +19,6 @@ BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_video
 #redim(BASEPATH)
 # datacleanse(BASEPATH)
 # redim(BASEPATH)
-# categorize(BASEPATH)
+categorize(BASEPATH2)
 determine_speed(BASEPATH, BASEPATH2)
 
