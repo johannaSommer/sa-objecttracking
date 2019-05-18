@@ -31,7 +31,7 @@ def determine_speed(og_file, new_file):
                 distance = math.sqrt(abs(int(row[2]) - int(og[ind-2][2]))**2 + abs(int(row[1]) - int(og[ind-2][1]))**2)
                 distance_conv = distance * 0.0067
                 # returns m/s
-                speed = distance_conv / 0.0048
+                speed = distance_conv / 0.08
                 strip = new[ind].strip('\n')
                 f.write(strip + ';' + str(int(speed)))
                 f.write('\n')

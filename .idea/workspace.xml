@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/sync_videos/data/sync_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/sync_videos/data/sync_4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/sync_videos/data/sync_7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/sync_videos/data/sync_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/analysis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,13 +30,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="51" column="12" selection-start-line="49" selection-start-column="4" selection-end-line="62" selection-end-column="14" />
+            <state relative-caret-position="769">
+              <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -52,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+            <state relative-caret-position="576">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -94,8 +90,8 @@
         <option value="$PROJECT_DIR$/src/main/DataHandler.py" />
         <option value="$PROJECT_DIR$/src/main/datahandling.py" />
         <option value="$PROJECT_DIR$/src/main/BlobDetection.py" />
-        <option value="$PROJECT_DIR$/src/main/analysis.py" />
         <option value="$PROJECT_DIR$/src/main/main.py" />
+        <option value="$PROJECT_DIR$/src/main/analysis.py" />
       </list>
     </option>
   </component>
@@ -322,23 +318,22 @@
       <workItem from="1557907872013" duration="5294000" />
       <workItem from="1557996743915" duration="2219000" />
       <workItem from="1558008752127" duration="4979000" />
-      <workItem from="1558170084109" duration="260000" />
+      <workItem from="1558170084109" duration="1927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43041000" />
+    <option name="totallyTimeSpent" value="44708000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13143776" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32938644" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49583334" visible="true" weight="0.16666667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49583334" weight="0.16666667" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4231499" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -416,20 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="51" column="12" selection-start-line="49" selection-start-column="4" selection-end-line="62" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -437,6 +418,20 @@
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="89" column="26" lean-forward="true" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>
