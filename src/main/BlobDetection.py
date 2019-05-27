@@ -23,12 +23,12 @@ class Blobdetection:
             params.minArea = 70
             params.maxArea = 700
             params.minCircularity = 0.3
+            params.minInertiaRatio = 0.2
         else:
             params.minArea = 100
-            # params.minArea = 150
             params.maxArea = 900
             params.minCircularity = 0.2
-        params.minInertiaRatio = 0.2
+            params.minInertiaRatio = 0.05
 
         self.detector = cv.SimpleBlobDetector_create(params)
         self.threshold = 150
