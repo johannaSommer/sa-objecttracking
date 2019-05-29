@@ -31,7 +31,7 @@ def determine_speed(og_file, new_file):
                 distance = math.sqrt(abs(int(row[2]) - int(og[ind-2][2]))**2 + abs(int(row[1]) - int(og[ind-2][1]))**2)
                 distance_conv = distance * 0.0067
                 # returns m/s
-                speed = distance_conv / 0.05
+                speed = distance_conv / 0.032
                 strip = new[ind].strip('\n')
                 f.write(strip + ';' + str(int(speed)))
                 f.write('\n')
@@ -65,7 +65,7 @@ def categorize(fileloc):
             f.write(str(row[0]) + " ; " + str(row[1]) + " ; " + str(row[2]) + ';' + str(counter))
             f.write("\n")
             direction = math.copysign(1, int(row[2]) - int(exi[0][2]))
-        if ind > 0:
+        if ind > 1:
             current = int(row[2]) - int(exi[ind-1][2])
             if direction != math.copysign(1, current):
                 direction = math.copysign(1, current)

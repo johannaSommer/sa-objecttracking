@@ -19,6 +19,6 @@ BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_video
 #redim(BASEPATH)
 # datacleanse(BASEPATH)
 # redim(BASEPATH)
-categorize(BASEPATH2)
-determine_speed(BASEPATH, BASEPATH2)
+#categorize(BASEPATH2)
+#determine_speed(BASEPATH, BASEPATH2)
 
