@@ -1,6 +1,6 @@
 import cv2 as cv
 import time
-import numpy as np
+
 
 class Backgroundsub:
     def __init__(self, fileloc):
@@ -9,23 +9,12 @@ class Backgroundsub:
         self.backsub = cv.createBackgroundSubtractorMOG2()
         self.backsub.setDetectShadows(0)
 
-    def applybgs(self):
-        while True:
-            ret, frame = self.cap.read()
-            if frame is None:
-                break
-            fgmask = self.backsub.apply(frame)
-            frameinverted = cv.bitwise_not(fgmask)
-            cv.imshow("fgmask", frameinverted)
-            if cv.waitKey(1) & 0xFF == ord('q'):
-                break
-
     def savebgs(self):
         fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
         outfile = self.infile + "__" + str(time.time()) + ".wmv"
         video = cv.VideoWriter(outfile, cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
         if video.isOpened() is False:
-            print("no file opened")
+            raise ValueError('No file could be opened.')
         while True:
             ret, frame = self.cap.read()
             if frame is None:

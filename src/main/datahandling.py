@@ -1,4 +1,3 @@
-
 def writetocsv(trajectory, name):
     f = open(name, "w")
     f.write("")
@@ -13,6 +12,7 @@ def writetocsv(trajectory, name):
             while counter < x[1]:
                 f.write("\n")
                 counter += 1
+
 
 def adddimension(trajectory):
     file = open('data.csv')
@@ -39,6 +39,7 @@ def adddimension(trajectory):
                 print(exi[counter-1])
                 f.write(exi[counter-1])
                 counter += 1
+
 
 def datacleanse(fileloc):
     file = open(fileloc)

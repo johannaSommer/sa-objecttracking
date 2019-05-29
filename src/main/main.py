@@ -11,14 +11,4 @@ BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos
 BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8.csv')
 
 
-#Backgroundsub(BASEPATH).savebgs()
-#trajectory = Blobdetection(BASEPATH, True).showbd(False)
-#writetocsv(trajectory, 'test.csv')
-#trajectory2 = Blobdetection(BASEPATH2, True, False).showbd()
-#DataHandler().adddimension(trajectory2)
-#redim(BASEPATH)
-# datacleanse(BASEPATH)
-# redim(BASEPATH)
-#categorize(BASEPATH2)
-#determine_speed(BASEPATH, BASEPATH2)
 
