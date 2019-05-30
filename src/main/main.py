@@ -7,8 +7,8 @@ from analysis import categorize
 from analysis import determine_speed
 import os
 
-BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8_og.csv')
-BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sync_videos', 'data', 'sync_8.csv')
+BASEPATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos', 'data', 'sync_4.csv')
+BASEPATH2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'videos', 'data', 'sync_4_og.csv')
 
-
-
+categorize(BASEPATH)
+determine_speed(BASEPATH2, BASEPATH)
