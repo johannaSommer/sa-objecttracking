@@ -4,26 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/datahandling.py" line="46" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/videos/data/sync_4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blenderscript.blend" beforeDir="false" afterPath="$PROJECT_DIR$/src/blenderscript.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_1_norm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_1_norm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_1_og.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_1_og.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_2_norm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_2_norm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_2_og.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_2_og.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_4_norm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_4_norm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_4_og.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_4_og.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_7_norm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_7_norm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_7_og.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_7_og.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_8_norm.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_8_norm.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sync_videos/data/sync_8_og.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/videos/data/sync_8_og.csv" afterDir="false" />
-    </list>
+    <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,18 +346,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54774000" />
+    <option name="totallyTimeSpent" value="55281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18240343" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18240343" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32922202" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49583334" visible="true" weight="0.16555555" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49583334" weight="0.16555555" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4231499" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
