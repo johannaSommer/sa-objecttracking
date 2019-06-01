@@ -44,6 +44,7 @@ def determine_speed(og_file, new_file):
 
 
 def categorize(fileloc):
+    print('herrerehehere')
     file = open(fileloc)
     exi = file.readlines()
     f = open(fileloc, "w")
