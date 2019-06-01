@@ -6,7 +6,7 @@ import numpy as np
 
 def test_pixelh():
     # read in original file
-    PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'sampledata', 'sync_1_1.mp4')
+    PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'testing', 'testdata', 'sync_1_1.mp4')
     bgs = Backgroundsub(PATH)
     # read in background subtracted video
     out = bgs.savebgs()
