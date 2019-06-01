@@ -20,9 +20,26 @@ def test_writecsv():
 
 
 def test_datacleanse():
-
-    assert 0
+    file = open('testdata/sync_1_norm.csv')
+    testdata = file.readlines()
+    correct = True
+    for x in testdata:
+        temp = x.split(';')
+        if len(temp) != 3:
+            correct = False
+    assert correct
 
 
 def test_redim():
-    assert 0
+    file = open('testdata/sync_1_norm.csv')
+    testdata = file.readlines()
+    correct = True
+    for x in testdata:
+        temp = x.split(';')
+        if int(temp[0]) > 1920 or int(temp[0]) < 0:
+            correct = False
+        if int(temp[1]) > 1080 or int(temp[1]) < 0:
+            correct = False
+        if int(temp[2]) > 0 or int(temp[2]) < -1920:
+            correct = False
+    assert correct
