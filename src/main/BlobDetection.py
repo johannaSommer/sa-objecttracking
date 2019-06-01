@@ -60,9 +60,4 @@ class Blobdetection:
 
     def showbdimg(self):
         keypoints = self.detector.detect(self.cap)
-        im_with_keypoints = cv.drawKeypoints(self.cap, keypoints, np.array([]), (0, 0, 255),
-                                             cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        while True:
-            cv.imshow("Keypoints", im_with_keypoints)
-            if cv.waitKey(1) & 0xFF == ord('q'):
-                break
+        return keypoints
