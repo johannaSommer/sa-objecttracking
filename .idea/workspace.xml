@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing/backsub_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing/blobdec_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing/datah_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/testing/utils_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Results - pytest_in_test_all_py.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing/1559411328.65.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing/1559411387.29.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing/test_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing/test_all.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +33,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testing/test_all.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+            <state relative-caret-position="599">
+              <caret line="170" column="44" lean-forward="true" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -355,6 +355,7 @@
       <workItem from="1558337208048" duration="13000" />
       <workItem from="1558965140707" duration="1106000" />
       <workItem from="1559379751149" duration="13607000" />
+      <workItem from="1559415910847" duration="463000" />
     </task>
     <servers />
   </component>
@@ -391,12 +392,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68888000" />
+    <option name="totallyTimeSpent" value="69351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18508583" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18776824" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -487,9 +489,7 @@
     <entry file="file://$PROJECT_DIR$/src/testing/testdata/sync_1_norm.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test Results - pytest_in_datah_test_py.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test Results - pytest_in_datah_test_py.html" />
     <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -511,56 +511,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/analysis_test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/backsub_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="48" selection-start-line="5" selection-end-line="48" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/datah_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="45" selection-start-line="4" selection-end-line="45" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/blobdec_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="3" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testing/utils_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="32" selection-start-line="4" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testing/analysis_test.py" />
+    <entry file="file://$PROJECT_DIR$/src/testing/backsub_test.py" />
+    <entry file="file://$PROJECT_DIR$/src/testing/datah_test.py" />
+    <entry file="file://$PROJECT_DIR$/src/testing/blobdec_test.py" />
+    <entry file="file://$PROJECT_DIR$/src/testing/utils_test.py" />
     <entry file="file://$PROJECT_DIR$/src/testing/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testing/test_all.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="599">
+          <caret line="170" column="44" lean-forward="true" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
