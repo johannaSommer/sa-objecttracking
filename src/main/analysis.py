@@ -1,7 +1,9 @@
 import math
 
 
+# function to calculate the speed of three consecutive frames with all coordinates
 def determine_speed(og_file, new_file):
+    # open both the file to be written in and the original file
     file = open(og_file)
     og = file.readlines()
     file = open(new_file)
@@ -10,6 +12,7 @@ def determine_speed(og_file, new_file):
     f.write("")
     f = open(new_file, "a")
     k = 0
+    # parse content of original file
     while k < len(og):
         strip = og[k].strip("\n")
         if strip == ';;':
@@ -25,6 +28,7 @@ def determine_speed(og_file, new_file):
                 og[k] = [split[0], split[1], split[2]]
         k += 1
     counter = 0
+    # calculate speed when at least three frames exist and write to file
     for ind, row in enumerate(og):
         if row[1] != 0 and row[2] != 0:
             if counter > 1:
@@ -43,19 +47,22 @@ def determine_speed(og_file, new_file):
             f.write(new[ind])
 
 
+# function to  classify hits
 def categorize(fileloc):
-    print('herrerehehere')
+    # open file
     file = open(fileloc)
     exi = file.readlines()
     f = open(fileloc, "w")
     f.write("")
     f = open(fileloc, "a")
     k = 0
+    # parse content of file
     while k < len(exi):
         exi[k] = exi[k].strip('\n')
         exi[k] = exi[k].split(';')
         k += 1
     # only z axis (exi[k][2]) relevant for movement
+    # iterate through content and compare value to direction variable
     counter = 1
     direction = None
     for ind, row in enumerate(exi):

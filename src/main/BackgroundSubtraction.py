@@ -3,18 +3,22 @@ import time
 
 
 class Backgroundsub:
+    # create instance of class and set all variables
     def __init__(self, fileloc):
         self.infile = fileloc[:-4]
         self.cap = cv.VideoCapture(fileloc)
         self.backsub = cv.createBackgroundSubtractorMOG2()
         self.backsub.setDetectShadows(0)
 
+    # function to apply backsub and save output video
     def savebgs(self):
+        # prepare output file
         fsize = (int(self.cap.get(cv.CAP_PROP_FRAME_WIDTH)), (int(self.cap.get(cv.CAP_PROP_FRAME_HEIGHT))))
         outfile = self.infile + "__" + str(time.time()) + ".wmv"
         video = cv.VideoWriter(outfile, cv.VideoWriter_fourcc('W', 'M', 'V', '1'), 30, fsize, False)
         if video.isOpened() is False:
             raise ValueError('No file could be opened.')
+        # apply background subtraction to every frame and save individually to output
         while True:
             ret, frame = self.cap.read()
             if frame is None:

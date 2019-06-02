@@ -1,3 +1,4 @@
+# write input trajectory to given file
 def writetocsv(trajectory, name):
     f = open(name, "w")
     f.write("")
@@ -34,13 +35,16 @@ def writetocsv(trajectory, name):
 #                 counter += 1
 
 
+# function to fill all empty frames
 def datacleanse(fileloc):
+    # open file
     file = open(fileloc)
     exi = file.readlines()
     f = open(fileloc, "w")
     f.write("")
     f = open(fileloc, "a")
     k = 0
+    # parse content and catch empty cells
     while k < len(exi):
         strip = exi[k].strip("\n")
         if strip == ';;':
@@ -56,8 +60,10 @@ def datacleanse(fileloc):
                 exi[k] = [split[0], split[1], split[2]]
         k += 1
     dimensions = [0, 1, 2]
+    # iterate through dimenstions
     for dim in dimensions:
         k = 0
+        # iterate through rows and fill empty cells
         while k < len(exi):
             if exi[k][dim] == 0:
                 counter = 1
@@ -79,14 +85,16 @@ def datacleanse(fileloc):
         f.write(str(x[0]) + ';' + str(x[1]) + ';' + str(x[2]) + '\n')
 
 
+# function to recalculate all coordinates
 def redim(fileloc):
+    # open file
     file = open(fileloc)
     exi = file.readlines()
     f = open(fileloc, "w")
     f.write("")
     f = open(fileloc, "a")
     k = 0
-    print(exi)
+    # resize coordinates according to provided formula
     while k < len(exi):
         strip = exi[k].strip("\n")
         split = strip.split(';')
