@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="755ffce9-6799-4c35-8124-c83eaa08c55d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/BackgroundSubtraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BackgroundSubtraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BlobDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BlobDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/datahandling.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/datahandling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/process/data/sync_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/process/data/sync_1_norm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/process/data/sync_1_og.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +30,18 @@
   <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" userTempatePath="" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,43 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/BackgroundSubtraction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/BlobDetection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="819">
               <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -94,6 +72,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>test_pixelv</find>
+      <find>long</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -123,7 +102,6 @@
         <option value="$PROJECT_DIR$/src/main/Datahandler.py" />
         <option value="$PROJECT_DIR$/src/data2.csv" />
         <option value="$PROJECT_DIR$/src/main/DataHandler.py" />
-        <option value="$PROJECT_DIR$/src/main/main.py" />
         <option value="$PROJECT_DIR$/src/testing/blobdec-test.py" />
         <option value="$PROJECT_DIR$/src/testing/test_datahandling.py" />
         <option value="$PROJECT_DIR$/src/testing/blobdec_test.py" />
@@ -135,9 +113,10 @@
         <option value="$PROJECT_DIR$/src/testing/test_all.py" />
         <option value="$PROJECT_DIR$/src/main/analysis.py" />
         <option value="$PROJECT_DIR$/src/main/BackgroundSubtraction.py" />
-        <option value="$PROJECT_DIR$/src/main/BlobDetection.py" />
         <option value="$PROJECT_DIR$/src/main/datahandling.py" />
         <option value="$PROJECT_DIR$/src/main/utils.py" />
+        <option value="$PROJECT_DIR$/src/main/BlobDetection.py" />
+        <option value="$PROJECT_DIR$/src/main/main.py" />
       </list>
     </option>
   </component>
@@ -173,6 +152,12 @@
               <item name="sa-objecttracking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sa-objecttracking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sa-objecttracking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sampledata" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -215,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_all.py">
+  <component name="RunManager" selected="Python.BasicCV_improved">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -377,7 +362,7 @@
       <workItem from="1558337208048" duration="13000" />
       <workItem from="1558965140707" duration="1106000" />
       <workItem from="1559379751149" duration="13607000" />
-      <workItem from="1559415910847" duration="1631000" />
+      <workItem from="1559415910847" duration="2852000" />
     </task>
     <servers />
   </component>
@@ -414,18 +399,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70519000" />
+    <option name="totallyTimeSpent" value="71740000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18776824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18776824" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32922202" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49583334" weight="0.3211111" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288889" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49583334" visible="true" weight="0.3211111" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42222223" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,7 +439,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sa_objecttracking$BasicCV_improved.coverage" NAME="BasicCV_improved Coverage Results" MODIFIED="1559232783789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/sa_objecttracking$BasicCV_improved.coverage" NAME="BasicCV_improved Coverage Results" MODIFIED="1559476746614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/sa_objecttracking$pytest_in_backsub_test_py.coverage" NAME="pytest in test_all.py Coverage Results" MODIFIED="1559411383910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
@@ -478,16 +463,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/laenge.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/testing/testdata/sync_1_norm.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -510,17 +485,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
+    <entry file="file://$PROJECT_DIR$/src/main/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        <state relative-caret-position="407">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/BackgroundSubtraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="527">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
@@ -529,25 +504,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/BlobDetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+        <state>
+          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/datahandling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="819">
           <caret line="87" column="41" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/utils.py">
+    <entry file="file://$PROJECT_DIR$/src/main/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        <state relative-caret-position="382">
+          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
