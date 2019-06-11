@@ -22,7 +22,7 @@ koennen. Fuer die entsprechenden Schritte koennen einfach die zugehoerigen Code-
 ausgefuerht werden
 '''
 
-# Background Subtraction auf beide Snippets anwenden und Output speichern
+# Background Subtraction auf beide Snippets anwenden und Oqqutput speichern
 # bgs1 = Backgroundsub(PATH1)
 # bgs1.savebgs()
 # bgs2 = Backgroundsub(PATH2)
@@ -31,6 +31,7 @@ ausgefuerht werden
 # Blob Detection auf beide BackSub Videos anwenden
 # bd1 = Blobdetection(PATH3, True, True)
 # trajectory1 = bd1.showbd()
+# print(trajectory1)
 # bd2 = Blobdetection(PATH4, True, False)
 # trajectory2 = bd2.showbd()
 
